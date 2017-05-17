@@ -1,0 +1,14 @@
+Q1: What is the difference between EBS and S3?
+EBS is non scalable and acts just like a hardrive.  S3 is scalable.
+
+Q2: When would you consider a cloud infrastructure for your data science tasks?
+There are a few cases where I would consider a cloud infrastructure for a data science task.  One such case would be a situation where I needed a high amount of processing power but wasn't going to need that power for ever (i.e. it doesn't make sense to build my own stack if I'm not going to need the stack forever).  Another situation would be if I wasn't sure how much data storage or processing power I might need in the future.  AWS makes scaling quite a bit more efficient.
+
+Q3: What is the difference between spot instances and reserved instances?
+Spot instances are instances that you bid on that can be useful for adding computing power to speed tasks along.  Reserved instances have set prices and set amounts of of usage (time and computing capacity) ahead of time.
+
+Q4: List the names of four software packages installed on the UCB AMI
+aplay
+fax2tiff
+git
+ipython
