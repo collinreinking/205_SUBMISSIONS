@@ -1,0 +1,52 @@
+1. List the HDFS contents of `/user`
+drwxr-xr-x   - mapred  supergroup          0 2017-05-18 03:29 /user/history
+drwxrwxrwx   - hive    supergroup          0 2017-05-18 03:30 /user/hive
+drwxrwxrwx   - hue     supergroup          0 2017-05-18 03:31 /user/hue
+drwxrwxrwx   - jenkins supergroup          0 2017-05-18 03:30 /user/jenkins
+drwxrwxrwx   - oozie   supergroup          0 2017-05-18 03:31 /user/oozie
+drwxrwxrwx   - root    supergroup          0 2017-05-18 03:30 /user/root
+drwxr-xr-x   - hdfs    supergroup          0 2017-05-18 03:33 /user/spark
+drwxr-xr-x   - w205    supergroup          0 2017-05-18 03:38 /user/w205
+
+2. Inspect the output of the HDFS admin report and answer the following questions in a text file.
+
+  -To generate this, exit from the w205 user and type: `sudo -u hdfs hdfs dfsadmin -report`
+
+Q1: How many live datanodes are there?
+  1
+Q2: How much non-DFS storage is used?
+  5.10 GB
+Q3: How much DFS storage is used?
+  136.86 MB
+
+
+HDFS admin report
+Configured Capacity: 105555197952 (98.31 GB)
+Present Capacity: 100081308356 (93.21 GB)
+DFS Remaining: 99937796096 (93.07 GB)
+DFS Used: 143512260 (136.86 MB)
+DFS Used%: 0.14%
+Under replicated blocks: 0
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+Missing blocks (with replication factor 1): 0
+
+-------------------------------------------------
+Live datanodes (1):
+
+Name: 127.0.0.1:50010 (localhost)
+Hostname: ip-172-31-28-98.ec2.internal
+Decommission Status : Normal
+Configured Capacity: 105555197952 (98.31 GB)
+DFS Used: 143512260 (136.86 MB)
+Non DFS Used: 5473889596 (5.10 GB)
+DFS Remaining: 99937796096 (93.07 GB)
+DFS Used%: 0.14%
+DFS Remaining%: 94.68%
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 2
+Last contact: Thu May 18 03:41:52 UTC 2017
