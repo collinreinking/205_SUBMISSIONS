@@ -2,7 +2,7 @@
 
 Hive: 52.464 seconds  
 SparkSQL: 10.375 seconds  
-SparkSQL on 2.973 seconds  
+SparkSQL on: 2.973 seconds  
 
 ##### How many jobs does Hive launch? Does SparkSQL launch jobs?
 Hive launches 2 jobs.  
