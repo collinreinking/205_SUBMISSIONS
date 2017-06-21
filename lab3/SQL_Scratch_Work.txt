@@ -1,0 +1,76 @@
+
+
+
+SELECT weblogs_parquet.session_id, user_info.location
+FROM weblogs_parquet
+INNER JOIN user_info ON weblogs_parquet.user_id=user_info.user_id
+LIMIT 100;
+
+SELECT weblogs_parquet.session_id, user_info.location
+FROM weblogs_parquet
+JOIN user_info ON weblogs_parquet.user_id=user_info.user_id
+LIMIT 10;
+
+SELECT weblogs_parquet.session_id, user_info.location
+FROM weblogs_parquet
+JOIN user_info ON (weblogs_parquet.user_id=user_info.user_id)
+LIMIT 10;
+
+
+
+SELECT weblogs_parquet.session_id, user_info.location
+FROM weblogs_parquet
+JOIN user_info ON (weblogs_parquet.user_id=user_info.user_id)
+ORDER BY location
+LIMIT 10;
+
+
+SELECT user_info.location, count(user_info.location) as loc_count
+FROM weblogs_parquet
+JOIN user_info ON (weblogs_parquet.user_id=user_info.user_id)
+GROUP BY location
+ORDER BY loc_count desc
+LIMIT 5;
+
+
+
+SELECT * from weblogs_parquet
+WHERE userid = "__RequestVerificationToken_Lw__=2C2DB";
+
+
+SELECT * FROM weblogs_parquet
+WHERE user_id = "__RequestVerificationToken_Lw__=2C2DB"
+LIMIT 10;
+
+spark-sql> show tables;
+user_info	false
+weblogs_flat	false
+weblogs_parquet	false
+weblogs_schema	false
+
+spark-sql> SELECT * FROM weblogs_parquet
+         > WHERE user_id = "__RequestVerificationToken_Lw__=2C2DB"
+         > LIMIT 10;
+2003-12-25 07:11:38	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=K990KDS1LCL0HZAHA	/search/TDNN7ASRE	http://www.homeshop18.com
+2008-06-05 00:11:49	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=J73E69HSZQWDVGU08	/search/0NECKQ9G4	http://www.xyz.com
+2001-12-31 01:28:11	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=D82XVPL16TTSFC5IV	/product/TSHGTU0KY	http://www.xyz.com
+2008-04-08 20:44:30	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=16C4S0Q82MY9H5QMS	/search/32UAHOGSQ	http://www.amazon.com
+2012-11-30 14:33:08	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=7R40YTJO918A4M0S6	/product/ENLTC8S8A	http://www.ebay.com
+2002-03-20 12:10:00	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=C8OO5L4HNKEQXNECT	/search/MDGWKMH0R	http://www.google.com
+2009-11-28 04:04:09	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=J4B4KG6ULO8VG47EH	/search/5BZT4XCLG	http://www.amazon.com
+2010-01-01 08:33:54	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=32ZK54CRQEKAN4F9E	/product/ZHK26GS5O	http://www.xyz.com
+2014-08-16 05:26:18	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=NY6RRRXAJQ3E1RHM1	/product/T7KUUA0ST	http://www.facebook.com
+2010-03-31 23:01:14	__RequestVerificationToken_Lw__=2C2DB	;+.ASPXAUTH=XD2C84PZH4J4SL4F2	/search/AQHCUIQ1X	http://www.amazon.com
+Time taken: 0.388 seconds, Fetched 10 row(s)
+
+spark-sql> SELECT * FROM weblogs_parquet
+         > LIMIT 10;
+date	userid	sessionid	productid	refererurl
+2008-01-31 15:54:25	__RequestVerificationToken_Lw__=2ADB2	;+.ASPXAUTH=C31HDWD05KU00943S	/product/YJ29IOCVQ	http://www.abc.com
+
+
+spark-sql> SELECT * FROM user_info
+         > LIMIT 10
+         > ;
+date	userid	firstname	lastname	location
+2013-01-12 07:54:22	__RequestVerificationToken_Lw__=2B3CC	Channie	Kiflezghie	Tununak
