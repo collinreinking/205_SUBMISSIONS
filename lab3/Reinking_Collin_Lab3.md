@@ -1,12 +1,12 @@
 ##### List the execution time of the weblog aggregation query for Hive, SparkSQL, and SparkSQL on Parquet.
 
-Hive: 52.464 seconds
-SparkSQL: 10.375 seconds
-SparkSQL on 2.973 seconds
+Hive: 52.464 seconds  
+SparkSQL: 10.375 seconds  
+SparkSQL on 2.973 seconds  
 
 ##### How many jobs does Hive launch? Does SparkSQL launch jobs?
-Hive launches 2 jobs.
-SparkSQL does not launch jobs.
+Hive launches 2 jobs.  
+SparkSQL does not launch jobs.  
 
 ##### Write a query which joins weblogs_parquet to user_info and counts the top 5 locations. List the locations.
 ```
