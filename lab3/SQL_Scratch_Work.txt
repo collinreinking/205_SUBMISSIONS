@@ -1,4 +1,9 @@
-
+SELECT user_info.location, count(user_info.location) as loc_count
+         > FROM weblogs_parquet
+         > JOIN user_info ON (weblogs_parquet.user_id=user_info.user_id)
+         > GROUP BY location
+         > ORDER BY loc_count desc
+         > LIMIT 5;
 
 
 SELECT weblogs_parquet.session_id, user_info.location
@@ -25,7 +30,9 @@ ORDER BY location
 LIMIT 10;
 
 
-SELECT user_info.location, count(user_info.location) as loc_count
+SELECT
+    user_info.location,
+    count(user_info.location) as loc_count
 FROM weblogs_parquet
 JOIN user_info ON (weblogs_parquet.user_id=user_info.user_id)
 GROUP BY location
