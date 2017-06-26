@@ -24,4 +24,4 @@ hdfs dfs -put base_data/hospitals.csv hospitals
 hdfs dfs -put base_data/effective_care.csv effective_care
 hdfs dfs -put base_data/readmissions.csv readmissions
 hdfs dfs -put base_data/measures.csv measures
-hdfs dfs -put base_data/surveys_responses.csv surveys_responses.csv
+hdfs dfs -put base_data/surveys_responses.csv surveys_responses
