@@ -1,4 +1,4 @@
-DROPTABLE hospitals;
+DROP TABLE hospitals;
 CREATE EXTERNAL TABLE hospitals (
 Provider_ID string,
 Hospital_Name string,
@@ -10,7 +10,7 @@ County_Name string,
 Phone_Number string,
 Hospital_Type string,
 Hospital_Ownership string,
-Emergency_Services string,
+Emergency_Services string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
@@ -19,10 +19,10 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION ‘hospital_compare/hositals’;
+LOCATION '/user/w205/hospital_compare/hositals';
 
 
-DROPTABLE effective_care;
+DROP TABLE effective_care;
 CREATE EXTERNAL TABLE effective_care (
 Provider_ID String,
 Hospital_Name String,
@@ -48,4 +48,4 @@ WITH SERDEPROPERTIES (
   "escapeChar" = '\\'
 )
 STORED AS TEXTFILE
-LOCATION ‘hospital_compare/effective_care’;
+LOCATION '/user/w205/hospital_compare/effective_care';
