@@ -88,7 +88,7 @@ Measure_ID String,
 Measure_Start_Quarter String,
 Measure_Start_Date String,
 Measure_End_Quarter String,
-Measure_End_Date
+Measure_End_Date String
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
@@ -133,7 +133,7 @@ Overall_Rating_of_Hospital_Achievement_Points String,
 Overall_Rating_of_Hospital_Improvement_Points String,
 Overall_Rating_of_Hospital_Dimension_Score String,
 HCAHPS_Base_Score String,
-HCAHPS_Consistency_Score
+HCAHPS_Consistency_Score String
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
 WITH SERDEPROPERTIES (
