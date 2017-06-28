@@ -1,5 +1,5 @@
-DROP TABLE hospitals;
-CREATE EXTERNAL TABLE hospitals (
+DROP TABLE hospitals_raw;
+CREATE EXTERNAL TABLE hospitals_raw (
 Provider_ID string,
 Hospital_Name string,
 Address string,
@@ -22,8 +22,8 @@ STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/hospitals/';
 
 
-DROP TABLE effective_care;
-CREATE EXTERNAL TABLE effective_care (
+DROP TABLE effective_care_raw;
+CREATE EXTERNAL TABLE effective_care_raw (
 Provider_ID String,
 Hospital_Name String,
 Address String,
@@ -51,8 +51,8 @@ STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/effective_care';
 
 
-DROP TABLE readmissions;
-CREATE EXTERNAL TABLE readmissions (
+DROP TABLE readmissions_raw;
+CREATE EXTERNAL TABLE readmissions_raw (
 Provider_ID String,
 Hospital_Name String,
 Address String,
@@ -81,8 +81,8 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/readmissions';
 
-DROP TABLE measures;
-CREATE EXTERNAL TABLE measures (
+DROP TABLE measures_raw;
+CREATE EXTERNAL TABLE measures_raw (
 Measure_Name String,
 Measure_ID String,
 Measure_Start_Quarter String,
@@ -99,8 +99,8 @@ WITH SERDEPROPERTIES (
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/measures';
 
-DROP TABLE surveys_responses;
-CREATE EXTERNAL TABLE surveys_responses (
+DROP TABLE surveys_responses_raw;
+CREATE EXTERNAL TABLE surveys_responses_raw (
 Provider_Number String,
 Hospital_Name  String,
 Address String,
