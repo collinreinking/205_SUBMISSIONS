@@ -24,13 +24,19 @@ rm -rf Hospital_Revised_Flatfiles
 
 #Create hdfs directory for data
 hdfs dfs -mkdir /user/w205/hospital_compare
+hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
+hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions
+hdfs dfs -mkdir /user/w205/hospital_compare/measures
+hdfs dfs -mkdir /user/w205/hospital_compare/surveys_responses
+
 
 #Load data into hdfs
-hdfs dfs -put hospitals.csv hospital_compare/
-hdfs dfs -put effective_care.csv hospital_compare/
-hdfs dfs -put readmissions.csv hospital_compare/
-hdfs dfs -put measures.csv hospital_compare/
-hdfs dfs -put surveys_responses.csv hospital_compare/
+hdfs dfs -put hospitals.csv hospital_compare/hospitals/
+hdfs dfs -put effective_care.csv hospital_compare/effective_care/
+hdfs dfs -put readmissions.csv hospital_compare/readmissions/
+hdfs dfs -put measures.csv hospital_compare/measures/
+hdfs dfs -put surveys_responses.csv hospital_compare/surveys_responses/
 
 cd $start_dir
 
