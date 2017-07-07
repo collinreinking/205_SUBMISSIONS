@@ -1,0 +1,33 @@
+Best_States
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| State | Number of | Mean  | Low   | First    | Median | Third    | Highest | Standard  |
+|       | Measures  | Score | Score | Quartile | Score  | Quartile | Score   | Deviation |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| UT    | 1152      | 93.72 | 14    | 88.26    | 96.97  | 99.18    | 100     | 8.52      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| ME    | 1093      | 93.58 | 25    | 87.46    | 97.65  | 99.34    | 100     | 7.95      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| VA    | 3182      | 93.55 | 6     | 87.96    | 97.9   | 99.25    | 100     | 8.43      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| DE    | 288       | 93.34 | 27    | 88.5     | 96     | 99.09    | 100     | 8.15      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| CO    | 2069      | 93.28 | 0     | 87.88    | 96.95  | 99.16    | 100     | 8.91      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| CT    | 1250      | 93.26 | 16    | 88.02    | 96.92  | 98.97    | 100     | 8.19      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| NH    | 832       | 93.24 | 0     | 87.48    | 96.95  | 99.25    | 100     | 9         |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| NC    | 3967      | 93.22 | 19    | 87.75    | 96.87  | 99.15    | 100     | 8.75      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| SC    | 2276      | 93.19 | 0     | 87.81    | 96.96  | 99.18    | 100     | 9.1       |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+| MA    | 2442      | 93.19 | 22    | 88.04    | 95.99  | 99.07    | 100     | 8.31      |
++-------+-----------+-------+-------+----------+--------+----------+---------+-----------+
+
+My top 10 states ranked by quality of care are listed above.  These states are ranked by the mean score of all the the measures at all of the hospitals in the state.  The table also contains the five number summary and the standard deviation of the scores for that state, I included these values to make sure that the data for any one state wasn't wildly skewed or extremely spread out.  I believe that this is an appropriate approach to ranking states' hospital performance because it take an average measure of a wide range of performance indicators.
+
+Prior to calculating these statistics I inverted (100 - percent) any measure for which a lower score would represent a better performance.
+
+Any measures that were not on a percent scale were filtered out.  This included descriptive measures of the size of the providers as well as variables that were measured in units of time.  The primary reason I eliminated the time-based variables is that I did not know what domain from which it would be most appropriate to normalize time into a percent.  I also felt that number the percent measures was sufficient to answer the question of hospital quality.
+
+I did not weight the different measures for qualitative importance.  I believe that a more thorough ranking process would not only weight more critical care factors such as death rate for heart attack patients heavier than measures such as wether a heart attack patient was given aspirin as discharge.

@@ -1,0 +1,26 @@
+Best_Hospitals
+
+Hospital Name                             mean   low    median high stand measur
+                                          score  score  score  score dev  count
+HOLLAND COMMUNITY HOSPITAL..............  96.04  80     99.2   100  6.46  48
+WESLEY MEDICAL CENTER...................  95.97  78.9   99.22  100  6.46  50
+NOVANT HEALTH FORSYTH MEDICAL CENTER....  95.95  78.3   99.17  100  6.53  48
+LEWISGALE MEDICAL CENTER................  95.91  75.8   99.23  100  6.76  48
+PORTSMOUTH REGIONAL HOSPITAL............  95.82  77.4   97.73  100  6.77  47
+VALLEY REGIONAL MEDICAL CENTER..........  95.73  77.6   99.06  100  6.38  47
+CAROLINAS MEDICAL  CENTER-PINEVILLE.....  95.72  78.8   98.75  100  6.15  49
+SSM ST JOSEPH HOSPITAL WEST.............  95.66  79.1   99.1   100  6.6   47
+ST LUKE'S REGIONAL MEDICAL CENTER.......  95.65  79     98.39  100  6.1   51
+NYU HOSPITALS CENTER....................  95.64  78.2   98.92  100  6.34  51
+
+The table above contains the top 10 hospitals that I have identified as being models of high quality care based on the mean score of the percent performance on a variety of measures.  The table also contains the value of the lowest score, median score and highest score that the hospital received on any measure along with the standard deviation of all scores that the hospital received and the number of measures present for each hospital.
+
+These 10 hospitals earned consistently high scores (as demonstrated by their mean score) across a wide range of treatments (as demonstrated by the number of measurements that we have for each hospital)
+
+Prior to calculating these statistics I inverted (100 - percent) any measure for which a lower score would represent a better performance.
+
+Any measures that were not on a percent scale were filtered out.  This included descriptive measures of the size of the providers as well as variables that were measured in units of time.  The primary reason I eliminated the time-based variables is that I did not know what domain from which it would be most appropriate to normalize time into a percent.  I also felt that number the percent measures was sufficient to answer the question of hospital quality.
+
+Another critical choice that I made in the process was to required a minimum of 47 different measures for a hospital to be considered for me list.  I arrived at 47 because it was, approximately, the cutoff for the 80th percentile of number of measures and I felt like the language in the prompt, which asked asked about the "most consistently high scores across a variety of procedures" set the requirement of having a large number of different measures.  It is worth noting that this choice was somewhat arbitrary and Kaiser Foundation Hospitals take all top ten spots if the number of measures required dropped to the mean number of measure (approximately 30).
+
+I did not weight the different measures for qualitative importance.  I believe that a more thorough ranking process would not only weight more critical care factors such as death rate for heart attack patients heavier than measures such as wether a heart attack patient was given aspirin as discharge.

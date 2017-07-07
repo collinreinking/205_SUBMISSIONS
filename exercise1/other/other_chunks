@@ -1,0 +1,30 @@
+SELECT ### FROM effective_care_raw LIMIT 10;
+SELECT ###, count(###) FROM readmissions_raw GROUP BY ###;
+
+SELECT DISTINCT provider_id, sample FROM effective_care_raw;
+SELECT DISTINCT measure_id, measure_name, condition,  FROM effective_care_raw SORT BY measure_id;
+
+select sample, measure_name from effective_care_raw tablesample(0.005 percent);
+
+
+SELECT
+provider_id,
+condition,
+measure_id,
+score,
+sample,
+footnote
+FROM effective_care_raw TABLESAMPLE(0.005 percent);
+
+SELECT
+provider_id,
+condition,
+measure_id,
+score,
+sample,
+footnote
+FROM effective_care_raw
+WHERE sample="476";
+
+
+SELECT score,sample,measure_name FROM effective_care_raw TABLESAMPLE(0.005 percent);

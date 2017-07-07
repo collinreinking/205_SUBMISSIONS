@@ -1,0 +1,32 @@
+Hosptial_Variability
++------------+-----------------------------------------------------------------+
+| Standard   | Measure Name                                                    |
+| Deviation  |                                                                 |
+| of Measure |                                                                 |
++------------+-----------------------------------------------------------------+
+| 21.95      | Thrombolytic Therapy                                            |
++------------+-----------------------------------------------------------------+
+|            | Head CT Scan Results for Acute Ischemic Stroke or Hemorrhagic   |
+| 21.84      | Stroke Patients who Received Head CT or MRI Scan Interpretation |
+|            | Within 45 Minutes of ED Arrival                                 |
++------------+-----------------------------------------------------------------+
+| 18.78      | Fibrinolytic Therapy Received within 30 Minutes                 |
+|            | of Hospital Arrival                                             |
++------------+-----------------------------------------------------------------+
+| 18.05      | Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival   |
++------------+-----------------------------------------------------------------+
+| 16.3       | Venous Thromboembolism Warfarin Therapy Discharge Instructions  |
++------------+-----------------------------------------------------------------+
+| 15.26      | Venous Thromboembolism Prophylaxis                              |
++------------+-----------------------------------------------------------------+
+| 14.01      | Stroke Education                                                |
++------------+-----------------------------------------------------------------+
+| 12.72      | Home Management Plan of Care (HMPC) Document                    |
+|            | Given to Patient/Caregiver                                      |
++------------+-----------------------------------------------------------------+
+| 11.94      | Influenza Immunization                                          |
++------------+-----------------------------------------------------------------+
+| 11.83      | Discharge Instructions                                          |
++------------+-----------------------------------------------------------------+
+
+The table above shows the the 10 measures with the highest variability (in order) between hospitals based on their standard deviations.  It is important to note that I only looked at measures that were a percent metric of how often some procedure occurred or criteria was met. This means I did not look at metrics that were measure in time.  This is appropriate because it would not be meaningful to compare the distributions of variables that are not measured in the same unit (minutes vs. percent).

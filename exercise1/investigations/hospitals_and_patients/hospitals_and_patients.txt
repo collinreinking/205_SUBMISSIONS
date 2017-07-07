@@ -1,0 +1,32 @@
++--------------------+--------------------+-----------------------------+
+| Variable X         | Variable Y         | Pearson coefficient of      |
+|                    |                    | correlation between X and Y |
++--------------------+--------------------+-----------------------------+
+| mean of quality    | mean of survey     | 0.0603                      |
+| scores             | scores             |                             |
++--------------------+--------------------+-----------------------------+
+| standard deviation | standard deviation | -0.0152                     |
+| of quality scores  | of survey scores   |                             |
++--------------------+--------------------+-----------------------------+
+| number of measures | mean of survey     | -0.4852                     |
+| for the provider   | scores             |                             |
++--------------------+--------------------+-----------------------------+
+| number of measures | standard deviation | -0.157                      |
+| for the provider   | of survey scores   |                             |
++--------------------+--------------------+-----------------------------+
+| number of measures | mean of quality    | 0.2656                      |
+| for the provider   | scores             |                             |
++--------------------+--------------------+-----------------------------+
+| number of measures | standard deviation | -0.2024                     |
+| for the provider   | of quality scores  |                             |
++--------------------+--------------------+-----------------------------+
+
+The first two rows of the table directly answer the question that the assignment was asking.  I took the the I used the built in corr() function to find the Pearson coefficient of correlation between the mean measure score for each hospital and the mean survey score for each hospital.  There was only a very small (.06) positive correlation.  I did the same with standard deviation of scores for each hospital and the standard deviation of survey scores for each hospital and found an even weaker correlation (-0.02).
+
+This lack of strong correlation between measures of healthcare quality and measures the patient experience (that the survey questions address) is only a little bit surprising.  I would have expected an only slightly higher correlation on account of the fact that you would expect people to be generally happier with the experience when their health outcomes are better.
+
+I'm even less surprised about the lack of correlation in variability simply because we won'd have that many variables in the survey scores to help give a clear picture of variability in patient experience across different procedures.
+
+The third row, which shows that there is a significant (-0.49)(!) negative correlation between the survey score and the number of measures of quality that a hospitals data set contains might help understand more of what's happening here, especially when paired with the 5th row which shows a reasonable positive correlation (0.27) between the number of measures for the provider and the quality of the care.
+
+The narrative might go like this: Hospitals that provide a wider array of services have more resources dedicated to the kind of procedural compliance quality control that the measures of quality care reflect.  As such, regardless of whether or not they provide better care, they are definitely better at getting high scores on the "standardized test" style criteria of quality of care variables.  On the other hand hospitals that provide fewer services, employ fewer people and likely serve smaller communities and/or operate in specialty care areas where they may see their patients many more times or just have a generally more communal connection with their patients.  Fewer employees means that a patient will spend more time with the same doctors and nurses, which would greatly improve communication (or at least the sense of communication) between patients and their caregivers.  That relationship is what we see reflected in the survey scores.
